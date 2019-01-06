@@ -1,5 +1,7 @@
 /* eslint-env es6 */
 
+const resolve = require('rollup-plugin-node-resolve');
+
 const input = 'src/main.js';
 
 module.exports = [
@@ -7,6 +9,9 @@ module.exports = [
 	// dist/main.js
 	{
 		input: input,
+		plugins: [
+			resolve(),
+		],
 		output: {
 			name: 'main',
 			file: 'dist/main.js',
@@ -24,6 +29,9 @@ module.exports = [
 	// dist/main.bundle.js
 	{
 		input: input,
+		plugins: [
+			resolve(),
+		],
 		output: {
 			name: 'main',
 			file: 'dist/main.bundle.js',

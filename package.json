@@ -4,7 +4,8 @@
   "license": "MIT",
   "devDependencies": {
     "gulp": "^4.0.0",
-    "rollup": "^0.67.4"
+    "rollup": "^0.67.4",
+    "rollup-plugin-node-resolve": "^3.4.0"
   },
   "peerDependencies": {
     "moment": "^2.10.2",
