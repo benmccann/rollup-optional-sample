@@ -1,12 +1,11 @@
-var luxon = require("luxon");
+var moment = require("moment");
 
-var luxonAvailable = !!luxon;
-var DateTime = luxon ? luxon.DateTime : undefined;
+var momentAvailable = !!moment;
 
-console.log('Is luxon available? ' + luxonAvailable);
+console.log('Is moment available? ' + momentAvailable);
 
-if (DateTime) {
-	console.log('main loaded with luxon at ' + DateTime.local());	
+if (momentAvailable) {
+	console.log('main loaded with moment at ' + +moment());	
 }
 
-module.exports = DateTime;
+module.exports = moment;
