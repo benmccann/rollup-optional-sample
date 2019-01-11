@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <script src="https://requirejs.org/docs/release/2.3.6/comments/require.js"></script>
+    <script type="text/javascript">
+      require(['../dist/main.js'], function(DateTime) {
+        if (!DateTime) {
+          console.log('DateTime not exported');
+          return;
+        }
+        console.log('now: ' + DateTime.local());
+      });
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

@@ -7,3 +7,5 @@ try {
 }
 
 console.log('Is luxon available? ' + luxonAvailable);
+
+export default DateTime;
