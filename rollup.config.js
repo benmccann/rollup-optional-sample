@@ -1,5 +1,6 @@
 /* eslint-env es6 */
 
+const commonjs = require('rollup-plugin-commonjs');
 const resolve = require('rollup-plugin-node-resolve');
 const terser = require('rollup-plugin-terser').terser;
 
@@ -13,6 +14,7 @@ module.exports = [
 		input: input,
 		plugins: [
 			resolve(),
+			commonjs()
 		],
 		output: {
 			name: 'main',
@@ -30,6 +32,7 @@ module.exports = [
 		input: input,
 		plugins: [
 			resolve(),
+			commonjs(),
 			terser()
 		],
 		output: {
@@ -53,6 +56,7 @@ module.exports = [
 		input: input,
 		plugins: [
 			resolve(),
+			commonjs()
 		],
 		output: {
 			name: 'main',
@@ -64,6 +68,7 @@ module.exports = [
 		input: input,
 		plugins: [
 			resolve(),
+			commonjs(),
 			terser()
 		],
 		output: {

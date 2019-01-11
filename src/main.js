@@ -1,11 +1,12 @@
-import { DateTime } from "luxon";
+var luxon = require("luxon");
 
-var luxonAvailable = false;
-try {
-	luxonAvailable = !!DateTime;
-} catch (err) {
-}
+var luxonAvailable = !!luxon;
+var DateTime = luxon ? luxon.DateTime : undefined;
 
 console.log('Is luxon available? ' + luxonAvailable);
 
-export default DateTime;
+if (DateTime) {
+	console.log('main loaded with luxon at ' + DateTime.local());	
+}
+
+module.exports = DateTime;

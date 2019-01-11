@@ -5,8 +5,11 @@
   "devDependencies": {
     "gulp": "^4.0.0",
     "rollup": "^0.67.4",
+    "rollup-plugin-commonjs": "^9.2.0",
     "rollup-plugin-node-resolve": "^3.4.0",
-    "rollup-plugin-terser": "^3.0.0"
+    "rollup-plugin-terser": "^3.0.0",
+    "moment": "^2.10.2",
+    "luxon": "^1.9.0"
   },
   "peerDependencies": {
     "moment": "^2.10.2",
