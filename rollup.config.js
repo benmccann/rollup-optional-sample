@@ -7,7 +7,7 @@ const terser = require('rollup-plugin-terser').terser;
 const input = 'src/main.js';
 
 module.exports = [
-	// UMD builds (excluding moment)
+	// UMD builds (excluding moment/luxon)
 	// dist/main.min.js
 	// dist/main.js
 	{
@@ -21,11 +21,11 @@ module.exports = [
 			file: 'dist/main.js',
 			format: 'umd',
 			globals: {
-				luxon: 'luxon'
+				moment: 'moment'
 			}
 		},
 		external: [
-			'luxon'
+			'moment'
 		]
 	},
 	{
@@ -41,11 +41,11 @@ module.exports = [
 			format: 'umd',
 			indent: false,
 			globals: {
-				luxon: 'luxon'
+				moment: 'moment'
 			}
 		},
 		external: [
-			'luxon'
+			'moment'
 		]
 	},
 
